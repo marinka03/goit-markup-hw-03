@@ -47,6 +47,7 @@ body {
 .container {
   width: 1200px;
   margin: 0 auto;
+  padding: 0 15px 0 15px;
 }
 ul {
   margin: 0;
@@ -63,8 +64,7 @@ p {
   margin-top: 0;
 }
 .header {
-  height: 80px;
-  border: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
 }
 .header-container {
   display: flex;
@@ -90,16 +90,14 @@ p {
   line-height: 1.1;
   color: var(--logo-color);
   letter-spacing: 0.03em;
-  margin: 24px 0 25px;
-  margin-top: 24px;
-  margin-bottom: 25px;
+  padding: 24px 0 25px;
 }
 .header-menu {
   display: flex;
   align-items: center;
   gap: 50px;
   padding: 0;
-  margin: 32px 0;
+  margin: 0;
 }
 .nav-link {
   font-weight: 500;
@@ -107,6 +105,8 @@ p {
   line-height: 1.17;
   letter-spacing: 0.02em;
   color: var(--color-text-primary);
+  display: block;
+  padding: 32px 0;
 }
 .nav-link:hover,
 .nav-link:focus {
@@ -120,7 +120,6 @@ p {
   align-items: center;
   gap: 50px;
   padding: 0;
-  margin: 32px 0;
 }
 .contact-link {
   font-weight: 500;
@@ -128,6 +127,8 @@ p {
   line-height: 1.17;
   letter-spacing: 0.02em;
   color: var(--color-text-secondary);
+  display: block;
+  padding: 32px 0;
 }
 .contact-link:hover,
 .contact-link:focus {
@@ -144,12 +145,13 @@ p {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   background-color: var(--additional-background-color);
+  padding: 200px 0;
 }
 .effective-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 200px;
+  padding: 0 15px;
 }
 .main-title {
   width: 696px;
@@ -188,12 +190,14 @@ p {
   letter-spacing: 0.03em;
   text-align: center;
 }
+.features {
+  padding: 94px 0 94px;
+}
 .features-list {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 30px;
-  padding: 94px 0 94px;
 }
 .features-subtitle {
   width: 270px;
@@ -207,7 +211,7 @@ p {
 }
 .features-text {
   width: 270px;
-  margin: 0 0 30px;
+  margin: 0;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -215,6 +219,9 @@ p {
 }
 
 /*3 section*/
+.img {
+  padding: 0 0 94px;
+}
 .img-container {
   display: flex;
   flex-direction: column;
@@ -235,24 +242,25 @@ p {
   align-items: center;
   justify-content: center;
   gap: 30px;
-  padding-bottom: 94px;
+}
+.img-item {
+  display: block;
 }
 
 /*4 section*/
 .team {
   background-color: var(--fourth-section-background);
+  padding: 94px 0 94px;
 }
 .team-item {
   background-color: var(--header-background-color);
   border-radius: 0px 0px 4px 4px;
-  padding: 0 0 30px;
 }
 .team-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 94px 0 94px;
 }
 .team-title {
   margin: 0 0 50px;
@@ -268,8 +276,8 @@ p {
   justify-content: center;
   gap: 30px;
 }
-.images {
-  margin: 0 0 30px;
+.details {
+  padding: 30px;
 }
 .team-subtitle {
   margin: 0 0 10px;
@@ -291,13 +299,13 @@ p {
 /*Footer*/
 .footer {
   background-color: var(--additional-background-color);
+  padding: 60px 0 60px;
 }
 .footer-conteiner {
   display: flex;
   flex-direction: column;
   /*align-items: center;*/
   justify-content: flex-start;
-  padding: 60px 0 60px;
 }
 .logo {
   color: var(--hover-text-color);
@@ -311,8 +319,13 @@ p {
   letter-spacing: 0.03em;
   color: var(--additional-color);
 }
-.footer-link-address {
+.footer-item {
   margin: 0 0 9px;
+}
+.footer-item:last-child {
+  margin: 0;
+}
+.footer-link-address {
   font-size: 14px;
   font-style: normal;
   line-height: 1.71;
@@ -325,7 +338,6 @@ p {
   color: var(--hover-text-color);
 }
 .footer-link-mail {
-  margin: 0 0 9px;
   font-size: 14px;
   font-style: normal;
   line-height: 1.71;
@@ -338,7 +350,6 @@ p {
   color: var(--hover-text-color);
 }
 .footer-link-tel {
-  margin: 0;
   font-size: 14px;
   font-style: normal;
   line-height: 1.71;
@@ -352,12 +363,15 @@ p {
 }
 
 /*Portfolio*/
+.portfolio-section {
+  padding: 94px 0;
+}
 .list-button {
   display: flex;
   align-items: flex-start;
   justify-content: center;
   gap: 8px;
-  padding: 94px 0 50px;
+  margin: 0 0 50px;
 }
 .button-item {
   padding: 6px 22px 6px;
@@ -386,17 +400,22 @@ p {
 }
 .list-photo {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
   gap: 30px;
-  padding: 0 0 94px;
 }
-.list-photo-item {
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.details-portfolio {
+  padding: 20px 24px;
+  border-right: 1px solid #eee;
   border-bottom: 1px solid #eee;
-}
-.photo {
-  margin: 0 0 20px;
+  border-left: 1px solid #eee;
 }
 .subtitle-portfolio {
   margin: 0 0 4px;
@@ -414,7 +433,4 @@ p {
   letter-spacing: 0.03em;
   text-align: left;
   color: var(--color-text-secondary);
-}
-.list-photo-item {
-  border: 1px solid #eeeeee;
 }
