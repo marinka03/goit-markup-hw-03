@@ -42,6 +42,9 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+img {
+  display: block;
+}
 /*Header*/
 
 .container {
@@ -195,7 +198,7 @@ p {
 }
 .features-list {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   gap: 30px;
 }
@@ -243,10 +246,6 @@ p {
   justify-content: center;
   gap: 30px;
 }
-.img-item {
-  display: block;
-}
-
 /*4 section*/
 .team {
   background-color: var(--fourth-section-background);
@@ -400,13 +399,7 @@ p {
 }
 .list-photo {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
-}
-.box {
-  display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 30px;
